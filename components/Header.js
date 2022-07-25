@@ -18,7 +18,7 @@ const Header = () => {
       <nav>
         <ul className="flex items-center justify-center sm:flex-row flex-col text-center  my-5 sm:my-0">
           {navLinks.map((link) => (
-            <li>
+            <li  key={link.label}>
               <Link href={link.link}>
                 <a className="sm:mr-5 text-slate-700 hover:text-black">
                   {link.label}

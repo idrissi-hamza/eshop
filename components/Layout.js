@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "./Footer";
 import Header from "./Header";
 
 const Layout = ({ title, keywords, description, children }) => {
@@ -15,6 +16,7 @@ const Layout = ({ title, keywords, description, children }) => {
       </Head>
       <Header/>
       {children}
+      <Footer/>
     </div>
   );
 };
