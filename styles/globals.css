@@ -41,7 +41,7 @@
   }
 
   .el-wrapper:hover .info-inner {
-    bottom: 155px;
+    bottom: 150px;
   }
 
   .el-wrapper:hover .a-more {
@@ -103,7 +103,8 @@
     /* ease-out */
     position: absolute;
     width: 100%;
-    bottom: 0px;
+    bottom: -30px;
+
   }
 
   /* .info-inner .p-name,
@@ -111,8 +112,8 @@
     display: block;
   } */
 
-  .info-inner .p-name {
-    font-family: "PT Sans", sans-serif;
+   .p-name {
+    font-family: "Yeseva One", sans-serif;
     font-size: 18px;
     color: #3f96cd;
     /* margin-top: 10px; */
