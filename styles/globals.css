@@ -7,17 +7,17 @@
     background-color: #f7f7f7;
   }
 
-  .primary-clr{
-    color: #3f96cd
+  .primary-clr {
+    color: #3f96cd;
   }
-  .el-wrapper {
+
+  /* .el-wrapper {
     width: 360px;
     padding: 15px;
-    margin: 15px auto;
+    margin-inline:  auto;
     background-color: #fff;
-  }
-
-
+    
+  } */
 
   .el-wrapper:hover .h-bg {
     left: 0px;
@@ -66,7 +66,8 @@
   }
 
   .el-wrapper .img {
-    padding: 20px ;
+    /* margin-inline: 5px; */
+    /* background: #000; */
 
     transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
     /* ease-out */
@@ -113,9 +114,9 @@
   .info-inner .p-name {
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
-    color:  #3f96cd;
-    
-
+    color: #3f96cd;
+    /* margin-top: 10px; */
+    /* background: white; */
   }
 
   .info-inner .p-company {
