@@ -2,10 +2,10 @@ const data = {
   products: [
     {
       name: "Velvet Baby Plant Set",
-      category: "Baby Plants",
+      family: "Baby Plants",
       image: "/images/velvet.jpg",
       price: "25$",
-      // brand:"",
+      characteristic:"",
       rating: 4,
       countInStock: 10,
       description:
@@ -13,10 +13,10 @@ const data = {
     },
     {
       name: "Eulychnia Castanea f. Varispiralis",
-      category: "Baby Plants",
+      family: "Baby Plants",
       image: "/images/euly.jpeg",
       price: "25$",
-      placement:"",
+      // placement:"",
       rating: 4.5,
       countInStock: 9,
       description:
@@ -24,10 +24,10 @@ const data = {
     },
     {
       name: "Velvet Baby Plant Set",
-      category: "Baby Plants",
+      family: "Baby Plants",
       image: "/velvet.jpg",
       price: "25$",
-      // brand:"",
+      characteristic:"",
       rating: 4,
       countInStock: 10,
       description:
@@ -35,10 +35,10 @@ const data = {
     },
     {
       name: "Velvet Baby Plant Set",
-      category: "Baby Plants",
+      family: "Baby Plants",
       image: "/pl.webp",
       price: "25$",
-      // brand:"",
+      characteristic:"",
       rating: 4,
       countInStock: 10,
       description:

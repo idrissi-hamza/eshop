@@ -31,7 +31,7 @@ const Card = ({ plant }) => {
       </div>
 
       <div className="h-12 p-name  font-bold flex flex-col items-center justify-center bg-white">
-        Product name
+        {plant.name}
       </div>
 
       <div className="box-down">
@@ -40,7 +40,7 @@ const Card = ({ plant }) => {
         </div>
 
         <a className="cart" href="#">
-          <span className="price">$120</span>
+          <span className="price">{plant.price}</span>
           <span className="add-to-cart">
             <span className="txt">Add in cart</span>
           </span>
