@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Specification from "./Specification";
 
 const Card = ({ plant }) => {
   return (
     <div
-      className="el-wrapper  
+      className="el-wrapper group 
     w-[320px]  
   
     p-2  bg-white"
@@ -18,15 +19,13 @@ const Card = ({ plant }) => {
             layout="responsive"
           />
         </div>
-        <div className="img-info">
-          <div className="info-inner">
-            {/* <span className="p-name font-bold">Product name</span> */}
-            {/* <span className="p-company">Yeezy</span> */}
+        <div className="a-more">
+          <div className="info-inner  ">
+            <div className="inline-block">
+              <Specification plant={plant} />
+            </div>
           </div>
-          <div className="a-more">
-            More info :{" "}
-            <span className="more">more info about the product</span>
-          </div>
+          More info : <span className="more">more info about the product</span>
         </div>
       </div>
 

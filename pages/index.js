@@ -15,8 +15,8 @@ export default function Home() {
         md:grid-cols-2  lg:grid-cols-3
          2xl:grid-cols-4 3xl:flex flex-wrap justify-center min-h-full space"
         >
-          {data.products.map((plant) => (
-            <Card plant={plant} />
+          {data.products.map((plant, i) => (
+            <Card key={i} plant={plant} />
           ))}
         </div>
         {/* <ul>
