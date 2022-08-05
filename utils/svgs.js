@@ -3,7 +3,7 @@ const svgs = [
     specification: "diameter",
     svg: (
       <svg
-        className="w-16"
+        className="w-10"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 140 140"
       >
@@ -27,7 +27,7 @@ const svgs = [
     specification: "height",
     svg: (
       <svg
-        className="w-16"
+        className="w-10"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 140 140"
       >
@@ -51,7 +51,7 @@ const svgs = [
     specification: "loves",
     svg: (
       <svg
-        className="w-16"
+        className="w-10"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 140 140"
       >
@@ -63,7 +63,7 @@ const svgs = [
     specification: "care level",
     svg: (
       <svg
-        className="w-16"
+        className="w-10"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 140 140"
       >
@@ -77,7 +77,7 @@ const svgs = [
     specification: "benifits",
     svg: (
       <svg
-        className="w-16"
+        className="w-10"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 140 140"
       >

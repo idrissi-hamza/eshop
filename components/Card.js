@@ -6,7 +6,7 @@ const Card = ({ plant }) => {
     <div
       className="el-wrapper group 
     w-[320px]  
-  
+  cursor-pointer
     p-2  bg-white"
     >
       <div className="box-up flex flex-col">
