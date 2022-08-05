@@ -1,9 +1,17 @@
 const data = {
-  products: [
+  plants: [
     {
       name: "Velvet Baby Plant Set",
+      slug: "velvet-baby-set",
       family: "Baby Plants",
-      image: "/images/velvet.jpg",
+      image: [
+        "/images/velvet.jpg",
+        "/images/euly.jpeg",
+        "/images/velvet.jpg",
+        "/images/euly.jpeg",
+        "/images/velvet.jpg",
+        "/images/euly.jpeg",
+      ],
       price: "25$",
       characteristic: "",
       rating: 4,
@@ -14,8 +22,16 @@ const data = {
     },
     {
       name: "Eulychnia Castanea f. Varispiralis",
+      slug: "eulchina-castanea",
       family: "Baby Plants",
-      image: "/images/euly.jpeg",
+      image: [
+        "/images/velvet.jpg",
+        "/images/euly.jpeg",
+        "/images/velvet.jpg",
+        "/images/euly.jpeg",
+        "/images/velvet.jpg",
+        "/images/euly.jpeg",
+      ],
       price: "25$",
       // placement:"",
       rating: 4.5,
@@ -25,9 +41,17 @@ const data = {
       specifications: ["4cm", "±25cm", "partly shady", "easy", "air cleaner"],
     },
     {
-      name: "Velvet Baby Plant Set",
+      name: "Velvet 2",
+      slug: "velvet-2",
       family: "Baby Plants",
-      image: "/velvet.jpg",
+      image: [
+        "/images/velvet.jpg",
+        "/images/euly.jpeg",
+        "/images/velvet.jpg",
+        "/images/euly.jpeg",
+        "/images/velvet.jpg",
+        "/images/euly.jpeg",
+      ],
       price: "25$",
       characteristic: "",
       rating: 4,
@@ -37,9 +61,17 @@ const data = {
       specifications: ["4cm", "±25cm", "partly shady", "easy", "air cleaner"],
     },
     {
-      name: "Velvet Baby Plant Set",
+      name: "Velvet 3",
+      slug: "velvet-3",
       family: "Baby Plants",
-      image: "/pl.webp",
+      image: [
+        "/images/velvet.jpg",
+        "/images/euly.jpeg",
+        "/images/velvet.jpg",
+        "/images/euly.jpeg",
+        "/images/velvet.jpg",
+        "/images/euly.jpeg",
+      ],
       price: "25$",
       characteristic: "",
       rating: 4,

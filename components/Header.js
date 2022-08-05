@@ -7,7 +7,11 @@ const Header = () => {
     { label: "nav3", link: "/nav3" },
   ];
   return (
-    <header className="flex sm:flex-row flex-col justify-between items-center h-auto sm:h-16 px-8 shadow-md">
+    <header className="flex sm:flex-row flex-col justify-between items-center h-auto sm:h-16 px-8 shadow-md 
+    
+    bg-[##ebe9eb]
+    ">
+      {/* bg-[#b2bc83 ] */}
       <div className="my-5 sm:my-0 ">
         <Link href="/">
           <a className="sm:mr-5  primary-clr   font-extrabold text-xl  ">
@@ -18,7 +22,7 @@ const Header = () => {
       <nav>
         <ul className="flex items-center justify-center sm:flex-row flex-col text-center  my-5 sm:my-0">
           {navLinks.map((link) => (
-            <li  key={link.label}>
+            <li key={link.label}>
               <Link href={link.link}>
                 <a className="sm:mr-5 text-slate-700 hover:text-black">
                   {link.label}

@@ -4,11 +4,11 @@
 
 @layer components {
   body {
-    background-color: #f7f7f7;
+    background-color: #fffdf4;
   }
 
   .primary-clr {
-    color: #3f96cd;
+    color: #b2bc83;
   }
 
   /* .el-wrapper {
@@ -84,7 +84,7 @@
     /* ease-out */
     width: 660px;
     height: 100%;
-    background-color: #3f96cd;
+    background-color: #b2bc83;
     position: absolute;
     left: -657px;
   }
@@ -115,7 +115,7 @@
    .p-name {
     font-family: "Yeseva One", sans-serif;
     font-size: 18px;
-    color: #3f96cd;
+    color: #b2bc83;
     /* margin-top: 10px; */
     /* background: white; */
   }
