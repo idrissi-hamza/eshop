@@ -15,16 +15,16 @@ const Card = ({ plant }) => {
           <div className="img">
             <Image
               src={plant.image[0]}
-              alt="Picture of the "
+              alt="Picture of the plant"
               width={320}
               height={340}
-              layout="responsive"
+              objectFit="cover"
             />
           </div>
           <div className="a-more">
             <div className="info-inner  ">
               <div className="inline-block">
-                <Specification plant={plant}  />
+                <Specification plant={plant} />
               </div>
             </div>
             More info :{" "}

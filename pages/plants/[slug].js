@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import Link from "next/link";
 import Layout from "../../components/Layout";
 import data from "../../utils/data";
@@ -7,14 +7,24 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Plant = () => {
+  const [img, setImg] = useState("");
+  const [plant, setPlant] = useState(null);
+
   const router = useRouter();
-  // const  query  = { router };
-  const { slug } = router.query;
-  const plant = data.plants.find((plant) => plant.slug === slug);
-  console.log(plant);
-  if (!plant) {
-    return <div> no result for the entred url</div>;
-  }
+  useEffect(() => {
+    if (router.isReady) {
+      const { slug } = router.query;
+      console.log(slug);
+      let plant = data.plants.find((plant) => plant.slug === slug);
+      // console.log(plant);
+      setPlant(plant);
+      setImg(plant.image[0]);
+    }
+  }, [router.isReady]);
+
+  // if (!plant) {
+  //   return <div> no result for the entred url</div>;
+  // }
   return (
     plant && (
       <Layout title={plant.name}>
@@ -25,7 +35,7 @@ const Plant = () => {
           <div className="ml-auto pr-4">
             <div className="  relative">
               <Image
-                src={plant.image[0]}
+                src={img}
                 alt="Picture of the plant"
                 width={510}
                 height={614}
@@ -35,7 +45,7 @@ const Plant = () => {
             </div>
             <div className=" flex items-center justify-between pt-4">
               {plant.image.slice(1, 5).map((img) => (
-                <div>
+                <div onClick={() => setImg(img)}>
                   <Image
                     src={img}
                     alt="Picture of the plant"
