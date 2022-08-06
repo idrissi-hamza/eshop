@@ -5,6 +5,7 @@ import Layout from "../../components/Layout";
 import data from "../../utils/data";
 import Link from "next/link";
 import Image from "next/image";
+import Specification from "../../components/Specification";
 
 const Plant = () => {
   const [img, setImg] = useState("");
@@ -22,18 +23,23 @@ const Plant = () => {
     }
   }, [router.isReady]);
 
-  // if (!plant) {
-  //   return <div> no result for the entred url</div>;
-  // }
+  const [quantity, setQuantity] = useState(1);
+
+  const increase = () => {
+    (prev) => setQuantity(prev + 1);
+  };
+  const decrease = () => {
+    (prev) => setQuantity(prev - 1);
+  };
   return (
     plant && (
       <Layout title={plant.name}>
-        <Link href="/">
-          <a>Back to plants</a>
-        </Link>
-        <main className="grid grid-cols-2 ">
-          <div className="ml-auto pr-4">
-            <div className="  relative">
+        <div className="mx-auto">
+          <Link href="/">
+            <a>Back to plants</a>
+          </Link>
+          <main className=" grid grid-cols-2 max-w-5xl">
+            <div className=" pr-6">
               <Image
                 src={img}
                 alt="Picture of the plant"
@@ -42,37 +48,60 @@ const Plant = () => {
                 // layout="fill"
                 objectFit="cover"
               />
+
+              <div className=" flex items-center justify-between pt-4">
+                {plant.image.slice(1, 5).map((img, i) => (
+                  <div key={i} onClick={() => setImg(img)}>
+                    <Image
+                      src={img}
+                      alt="Picture of the plant"
+                      width={110}
+                      height={110}
+                      objectFit="cover"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className=" flex items-center justify-between pt-4">
-              {plant.image.slice(1, 5).map((img) => (
-                <div onClick={() => setImg(img)}>
-                  <Image
-                    src={img}
-                    alt="Picture of the plant"
-                    width={110}
-                    height={110}
-                    // layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-          <div
-            className=" flex flex-col items-start 
+            <div
+              className=" flex flex-col items-start 
            lg:px-18 
            sm:px-10  
-           px-6 
+            
            max-w-xl
             text-[#3a3b4a]  "
-          >
-            <h1 className="text-4xl leading-10 ">{plant.name}</h1>
-            <h2 className="text-3xl leading-5 mt-10">{plant.price}</h2>
-            <p className="mt-10">{plant.description}</p>
-          </div>
-          <div className="bg-green-300">specification</div>
-          <div className="bg-yellow-200">description</div>
-        </main>
+            >
+              <h1 className="text-4xl leading-10 ">{plant.name}</h1>
+              <h2 className="text-3xl leading-5 mt-10">{plant.price}</h2>
+              <p className="my-10">{plant.description}</p>
+              <Specification plant={plant} n={5} />
+              <div className="mt-14 flex space-x-8">
+                <span>Quantity</span>
+                <button
+                  onClick={() => {
+                    quantity > 1 && setQuantity(quantity - 1);
+                  }}
+                >
+                  -
+                </button>
+                <input
+                  type={"number"}
+                  value={quantity}
+                  className="w-10 "
+                  onChange={(e) => setQuantity(e.target.value)}
+                  max={99}
+                  min={1}
+                />
+                <button onClick={() => setQuantity(+quantity + 1)}>+</button>
+              </div>
+              <button className="bg-[#b2bc83] uppercase text-slate-100 tracking-wider font-bold min-w-full  py-5 mt-14">
+                Add to Card
+              </button>
+            </div>
+            <div className="bg-green-300">specification</div>
+            <div className="bg-yellow-200">description</div>
+          </main>
+        </div>
       </Layout>
     )
   );
