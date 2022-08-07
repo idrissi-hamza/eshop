@@ -23,7 +23,7 @@ const Layout = ({ title, keywords, description, children }) => {
 Layout.defaultProps = {
   title: "shop Market | Find your product",
   description: "Find your product",
-  keywords: "product1,product2", 
+  keywords: "product1,product2",
   // TODO to custom later
 };
 

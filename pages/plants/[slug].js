@@ -33,12 +33,12 @@ const Plant = () => {
   };
   return (
     plant && (
-      <Layout title={plant.name}>
-        <div className="mx-auto">
+      <Layout title={plant.name} description={plant.description}>
+        <div className="mx-auto flex flex-col">
           <Link href="/">
-            <a>Back to plants</a>
+            <a className="mt-10 inline-block">Back to plants</a>
           </Link>
-          <main className=" grid grid-cols-2 max-w-5xl">
+          <main className=" mt-14 grid grid-cols-2 max-w-5xl">
             <div className=" pr-6">
               <Image
                 src={img}
@@ -75,9 +75,10 @@ const Plant = () => {
               <h2 className="text-3xl leading-5 mt-10">{plant.price}</h2>
               <p className="my-10">{plant.description}</p>
               <Specification plant={plant} n={5} />
-              <div className="mt-14 flex space-x-8">
+              <div className="mt-14 flex space-x-8 items-center justify-center">
                 <span>Quantity</span>
                 <button
+                  className="font-bold text-lg"
                   onClick={() => {
                     quantity > 1 && setQuantity(quantity - 1);
                   }}
@@ -92,15 +93,30 @@ const Plant = () => {
                   max={99}
                   min={1}
                 />
-                <button onClick={() => setQuantity(+quantity + 1)}>+</button>
+                <button
+                  className="font-bold text-lg"
+                  onClick={() => {
+                    quantity < 99 && setQuantity(+quantity + 1);
+                  }}
+                >
+                  +
+                </button>
               </div>
+              {/* <div>
+                <span>Status : </span>
+                <span>
+                  {plant.countInStock > 0 ? "In Stock" : "Unavailable"}
+                </span>
+              </div> */}
               <button className="bg-[#b2bc83] uppercase text-slate-100 tracking-wider font-bold min-w-full  py-5 mt-14">
-                Add to Card
+                Add to Cart
               </button>
             </div>
-            <div className="bg-green-300">specification</div>
-            <div className="bg-yellow-200">description</div>
           </main>
+          {/* //a tab to add later */}
+          <section className="bg-green-300">
+            <div></div>
+          </section>
         </div>
       </Layout>
     )

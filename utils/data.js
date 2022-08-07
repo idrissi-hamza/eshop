@@ -25,8 +25,8 @@ const data = {
       slug: "eulchina-castanea",
       family: "Baby Plants",
       image: [
-        "/images/velvet.jpg",
         "/images/euly.jpeg",
+        "/images/velvet.jpg",
         "/images/velvet.jpg",
         "/images/euly.jpeg",
         "/images/velvet.jpg",
@@ -45,7 +45,7 @@ const data = {
       slug: "velvet-2",
       family: "Baby Plants",
       image: [
-        "/images/velvet.jpg",
+        "/images/pink.jpg",
         "/images/euly.jpeg",
         "/images/velvet.jpg",
         "/images/euly.jpeg",
@@ -55,7 +55,7 @@ const data = {
       price: "25$",
       characteristic: "",
       rating: 4,
-      countInStock: 10,
+      countInStock: 0,
       description:
         "The Velvet Baby Plant Set is the perfect choice for Aroid enthusiasts who can’t help but fall for soft, velvety foliage that looks as luxurious as it feels!",
       specifications: ["4cm", "±25cm", "partly shady", "easy", "air cleaner"],
@@ -67,7 +67,7 @@ const data = {
       image: [
         "/images/velvet.jpg",
         "/images/euly.jpeg",
-        "/images/velvet.jpg",
+        "/images/pink.jpg",
         "/images/euly.jpeg",
         "/images/velvet.jpg",
         "/images/euly.jpeg",

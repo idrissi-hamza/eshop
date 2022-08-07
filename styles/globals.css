@@ -5,6 +5,7 @@
 @layer components {
   body {
     background-color: #fffdf4;
+    font-family:"nunito"
   }
 
   .primary-clr {
