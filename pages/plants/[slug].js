@@ -38,8 +38,8 @@ const Plant = () => {
           <Link href="/">
             <a className="mt-10 inline-block">Back to plants</a>
           </Link>
-          <main className=" mt-14 grid grid-cols-2 max-w-5xl">
-            <div className=" pr-6">
+          <main className=" mt-14 flex flex-col gap-10 lg:gap-0 lg:flex-row max-w-5xl">
+            <div className="pl-10 ">
               <Image
                 src={img}
                 alt="Picture of the plant"
@@ -49,8 +49,8 @@ const Plant = () => {
                 objectFit="cover"
               />
 
-              <div className=" flex items-center justify-between pt-4">
-                {plant.image.slice(1, 5).map((img, i) => (
+              <div className=" flex items-center justify-between pt-4 ">
+                {plant.image.slice(0, 4).map((img, i) => (
                   <div key={i} onClick={() => setImg(img)}>
                     <Image
                       src={img}
@@ -65,10 +65,12 @@ const Plant = () => {
             </div>
             <div
               className=" flex flex-col items-start 
-           lg:px-18 
-           sm:px-10  
+              
+              bg-red-40
+
+              pl-20
             
-           max-w-xl
+           max-w-lg
             text-[#3a3b4a]  "
             >
               <h1 className="text-4xl leading-10 ">{plant.name}</h1>
@@ -114,9 +116,9 @@ const Plant = () => {
             </div>
           </main>
           {/* //a tab to add later */}
-          <section className="bg-green-300">
+          {/* <section className="bg-green-300">
             <div></div>
-          </section>
+          </section> */}
         </div>
       </Layout>
     )
