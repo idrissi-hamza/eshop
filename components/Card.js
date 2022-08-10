@@ -7,9 +7,9 @@ const Card = ({ plant }) => {
     <Link href={`/plants/${plant.slug}`}>
       <div
         className="el-wrapper group 
-        w-[320px]  
+         shadow-md hover:shadow-lg
         cursor-pointer
-        p-2  bg-white"
+          bg-white"
       >
         <div className="box-up flex flex-col">
           <div className="img">

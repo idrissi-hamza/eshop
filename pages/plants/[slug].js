@@ -25,21 +25,16 @@ const Plant = () => {
 
   const [quantity, setQuantity] = useState(1);
 
-  const increase = () => {
-    (prev) => setQuantity(prev + 1);
-  };
-  const decrease = () => {
-    (prev) => setQuantity(prev - 1);
-  };
+
   return (
     plant && (
       <Layout title={plant.name} description={plant.description}>
-        <div className="mx-auto flex flex-col">
+        <div className="mx-auto flex flex-col px-5">
           <Link href="/">
             <a className="mt-10 inline-block">Back to plants</a>
           </Link>
           <main className=" mt-14 flex flex-col gap-10 lg:gap-0 lg:flex-row max-w-5xl">
-            <div className="pl-10 ">
+            <div className="">
               <Image
                 src={img}
                 alt="Picture of the plant"
@@ -68,7 +63,7 @@ const Plant = () => {
               
               bg-red-40
 
-              pl-20
+              lg:pl-20
             
            max-w-lg
             text-[#3a3b4a]  "
@@ -76,7 +71,9 @@ const Plant = () => {
               <h1 className="text-4xl leading-10 ">{plant.name}</h1>
               <h2 className="text-3xl leading-5 mt-10">{plant.price}</h2>
               <p className="my-10">{plant.description}</p>
-              <Specification plant={plant} n={5} />
+              <div className="mx-auto">
+                <Specification plant={plant} n={5} />
+              </div>
               <div className="mt-14 flex space-x-8 items-center justify-center">
                 <span>Quantity</span>
                 <button

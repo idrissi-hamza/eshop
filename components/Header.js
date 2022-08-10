@@ -7,7 +7,7 @@ const Header = () => {
     { label: "nav3", link: "/nav3" },
   ];
   return (
-    <header className="flex sm:flex-row flex-col justify-between items-center h-auto sm:h-16 px-8 shadow-md 
+    <header className="flex sm:flex-row flex-col justify-between items-center h-auto sm:h-16 px-8 shadow-md w-full
     
     bg-[##ebe9eb]
     ">
