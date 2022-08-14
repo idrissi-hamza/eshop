@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const Header = () => {
   const navLinks = [
-    { label: "nav1", link: "/nav1" },
-    { label: "nav2", link: "/nav2" },
-    { label: "nav3", link: "/nav3" },
+    { label: "login", link: "/nav1" },
+    { label: "logout", link: "/nav2" },
+    { label: "signup", link: "/signup" },
   ];
   return (
     <header className="flex sm:flex-row flex-col justify-between items-center h-auto sm:h-16 px-8 shadow-md w-full
