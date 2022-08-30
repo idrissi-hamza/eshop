@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
   const navLinks = [
-    { label: "login", link: "/nav1" },
+    { label: "Login", link: "/login" },
     { label: "logout", link: "/nav2" },
     { label: "signup", link: "/signup" },
   ];

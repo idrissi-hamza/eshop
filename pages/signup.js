@@ -57,7 +57,7 @@ export default function Signup() {
           {!isPending && <button className="btn">sign up</button>}
           {isPending && (
             <button className="btn" disabled>
-              loading
+              loading...
             </button>
           )}
           {error && <p>{error}</p>}
