@@ -1,0 +1,65 @@
+import Image from "next/image"
+import Specification from "./Specification"
+import Link from "next/link"
+import Rating from "./Rating"
+
+const Card = ({ plant }) => {
+  return (
+    <Link href={`/plants/${plant.slug}`}>
+      <div
+        className="el-wrapper group 
+         shadow-md hover:shadow-lg
+        cursor-pointer
+          bg-white"
+      >
+        <div className="box-up flex flex-col">
+          <div className="img">
+            <Image
+              src={plant.image[0]}
+              alt="Picture of the plant"
+              width={320}
+              height={340}
+              objectFit="cover"
+            />
+          </div>
+          <div className="a-more">
+            <div className="info-inner  ">
+              <div className="inline-block">
+                <Specification plant={plant} />
+              </div>
+            </div>
+            More info :{" "}
+            <span className="more">more info about the product</span>
+          </div>
+        </div>
+
+        <div className="h-12 p-name  font-bold flex flex-col items-center justify-center bg-white">
+          {plant.name}
+        </div>
+
+        <div className="box-down">
+          <div className="h-bg">
+            <div className="h-bg-inner"></div>
+          </div>
+
+          <a
+            className="cart"
+            href="#"
+          >
+            <div className="price-rating">
+              <span className="">{plant.price}</span>
+              <div className="rating">
+                <Rating rating={plant.rating}/>
+              </div>
+            </div>
+            <span className="add-to-cart">
+              <span className="txt">Add in cart</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </Link>
+  )
+}
+
+export default Card
