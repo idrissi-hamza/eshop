@@ -1,6 +1,7 @@
-import Image from "next/image";
-import Specification from "./Specification";
-import Link from "next/link";
+import Image from "next/image"
+import Specification from "./Specification"
+import Link from "next/link"
+import Rating from "./Rating"
 
 const Card = ({ plant }) => {
   return (
@@ -41,8 +42,16 @@ const Card = ({ plant }) => {
             <div className="h-bg-inner"></div>
           </div>
 
-          <a className="cart" href="#">
-            <span className="price">{plant.price}</span>
+          <a
+            className="cart"
+            href="#"
+          >
+            <div className="price-rating">
+              <span className="">{plant.price}</span>
+              <div className="rating">
+                <Rating rating={plant.rating}/>
+              </div>
+            </div>
             <span className="add-to-cart">
               <span className="txt">Add in cart</span>
             </span>
@@ -50,7 +59,7 @@ const Card = ({ plant }) => {
         </div>
       </div>
     </Link>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
