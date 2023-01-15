@@ -11,8 +11,8 @@ app.get("/api/products", (req, res) => {
   res.send(products);
 });
 
-app.get("/api/products/:id", (req, res) => {
-  const product = products.find((p) => p._id === req.params.id);
+app.get("/api/products/:slug", (req, res) => {
+  const product = products.find((p) => p.slug === req.params.slug);
   res.send(product);
 });
 
